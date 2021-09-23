@@ -1,0 +1,14 @@
+.navbar-brand{
+    margin:10px;
+    font-weight: 700;
+    color:rgb(0, 162, 255);
+    list-style: none;
+    border:none;
+}
+
+.navbar-brand:focus{
+    outline:none;
+    color:rgb(0, 162, 255);
+    border:none;
+
+}

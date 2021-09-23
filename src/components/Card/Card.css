@@ -1,0 +1,19 @@
+.uk-card{
+    width: 50%;
+    border:2px solid red;
+}
+.header-img{
+    width:100%;
+}
+.title{
+    font-weight: 900;
+    font-size: 15rem;
+}
+.uk-inline-clip{
+    width:100px;
+    height:100px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
