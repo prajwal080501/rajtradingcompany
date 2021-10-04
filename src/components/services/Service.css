@@ -3,3 +3,11 @@
     font: 2rem;
     margin-top: 1px;
 }
+.card{ 
+    background-color: white;
+    color: black;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: fit-content;
+}
