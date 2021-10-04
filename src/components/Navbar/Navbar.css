@@ -1,14 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
 .navbar-brand{
-    margin:10px;
-    font-weight: 700;
-    color:rgb(0, 162, 255);
+    margin-left:90px;
+    margin-right: 450px;
+    font-weight: 1000;
+    font-size: 1.7rem;
+    color:#C03E3E !important;
     list-style: none;
     border:none;
-}
-
-.navbar-brand:focus{
-    outline:none;
-    color:rgb(0, 162, 255);
-    border:none;
+    text-decoration: none;
 
 }
+
+
+
+.menu-active{
+    transition: all 0.5s ease-in-out;
+    font-weight:bold;
+    color:orange !important;
+}
+.nav-link{
+    text-align: center;
+    margin:16px;
+    color:black !important;
+}
+
+.nav-link:link { text-decoration: none; }
+
+
+.nav-link:visited { text-decoration: none; }
+
+
+.navbar-brand:hover { text-decoration: none; }
+
+
+.nav-link:active { text-decoration: none; }
+
+.navbar{
+    background-color: transparent !important;
+}
+.nav-container{
+    background-color: ghostwhite;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-active{
+        transition: all 0.5s ease-in-out;
+        font-weight:bold;
+        color:black !important;
+    }
+    .nav-link{
+        margin:6px;
+    }
+    .navbar-brand{
+        font-size: 1.4rem;
+        margin-right: 0px;
+        margin-left:5%;
+        margin-top: 2%;
+    }
+   
+    
+}
+
+.navbar{
+    border-radius: 10p;
+    position:fixed;
+    background-image: linear-gradient(to right, #C0A73E,#a39484) !important;
+}
+/* rgba(235, 200, 44, 0.836) */
+/* #C0A73E amazon yellow & grey rgb(202, 201, 201)*/ 

@@ -1,6 +1,9 @@
 import React from "react";
+
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,14 +15,21 @@ import Service from "../services/Service";
 import Contact from "../Contact/Contact";
 import Home from "../Home/Home";
 
+
 const Navbar = () => {
   return (
-    <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div className="nav-container">
+      <header>
+        <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-light sticky-top">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
-              Raj Trading Company
-            </Link>
+            <motion.div className="brand" whileHover={{ scale: 1.08 }}>
+              <NavLink className="navbar-brand" to="/" uk-scroll data-toggle="collapse" data-target=".navbar-collapse.in">
+                RAJ TRADING COMPANY
+              </NavLink>
+            </motion.div>
+            <hr class="uk-divider-vertical"/>
+
+
             <button
               className="navbar-toggler"
               type="button"
@@ -31,67 +41,74 @@ const Navbar = () => {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div
+            <motion.div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul className="navbar-nav me-auto mr-2 mb-lg-0" data-toggle="collapse" data-target=".navbar">
                 <li className="nav-item">
-                  <Link
+                  <NavLink
+                    
+                    activeClassName="menu-active"
                     exact
                     className="nav-link active"
                     aria-current="page"
                     to="/"
+                    uk-scroll
                   >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
-                <li className="nav-item">
-                  <Link
+                <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.in">
+                  <NavLink
+                    
+                    activeClassName="menu-active"
                     exact
                     className="nav-link active"
                     aria-current="page"
                     to="/about"
+                    uk-scroll
                   >
                     About
-                  </Link>
+                  </NavLink>
                 </li>
-                <li className="nav-item">
-                  <Link
-                    exact
+
+                    
+                <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.in">
+                  <NavLink
+                    
+                    activeClassName="menu-active"
                     className="nav-link active"
-                    aria-current="page"
-                    to="/service"
-                  ></Link>
-                </li>
-                <li className="nav-item">
-                  <Link exact className="nav-link active" to="/contact">
+                    to="/contact"
+                    uk-scroll
+                  >
                     Contact
-                  </Link>
+                  </NavLink>
                 </li>
-                <li className="nav-item">
-                  <Link exact className="nav-link active" to="/service">
+                <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.in">
+                  <NavLink
+                    
+                    exact
+                    activeClassName="menu-active"
+                    className="nav-link active"
+                    to="/service"
+                    uk-scroll
+                  >
                     Services
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
-
-              <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
+              
+              
+            </motion.div>
           </div>
         </nav>
+      </header>
+      
     </div>
   );
+  
 };
+
 
 export default Navbar;

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Montserrat&display=swap');
+
+.uk-card{
+    background-color:white;
+    transition:all 0.5s ease; 
+    justify-self: center;
+    height: 30rem;
+    width: 50rem;
+    margin:auto;
+    border:1px solid brown;;
+    border-radius: 10px;
+    padding:60px;
+}
+.container{
+    font-weight: 300!important;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+.about-title{
+    font-family: 'Poppins', sans-serif;
+    color:#2e1559 ;
+    font-size:3rem;
+    font-weight: 400;
+    margin: 14px;
+}
+.list{
+    margin-top: 18px;
+    text-align: left;
+}
+.uk-article-meta{
+    font-size: 1rem;
+    color:black;
+    font-family: 'Baloo 2', cursive;
+
+}
+
+@media screen and (max-width: 768px) {
+    .uk-card{
+        height:98%;
+        width:100%;
+        margin-bottom: 10%;
+    }
+  }
+  .img-about{
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border:2px solid black;
+      opacity: 0
+  }

@@ -1,4 +1,11 @@
 .content{
-    height:100px;
     background-color:red;
+    
 }
+.footer{
+    color:blue!important;
+}
+.brand{
+    font-size: 5rem;
+}   
+

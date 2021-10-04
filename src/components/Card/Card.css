@@ -1,6 +1,7 @@
 .uk-card{
     width: 50%;
     border:2px solid red;
+    opacity:0.6
 }
 .header-img{
     width:100%;
@@ -13,7 +14,6 @@
     width:100px;
     height:100px;
 }
-.container{
-    display: flex;
-    flex-direction: row;
+.video{
+    margin-bottom:10px;
 }

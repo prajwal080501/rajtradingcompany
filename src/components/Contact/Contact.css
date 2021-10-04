@@ -1,0 +1,88 @@
+.title{
+    font-family: 'Poppins', sans-serif;
+    color:#2e1559;
+    font-size:3rem;
+    font-weight: 400;
+    margin: 14px;
+}
+.uk-input{
+    margin:10px;
+    padding:15px;
+}
+.uk-form-icon{
+    margin:5px;
+}
+.uk-contact1-card{
+    transition: all 0.5s;
+    height:fit-content;
+    width:50%;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid brown;
+    justify-content:left;
+    align-items:left;
+    justify-items: left;
+    color:black;
+    background-color:white;
+}
+.uk-contact-card{
+    justify-self: left;
+    transition: all 0.5s;
+    justify-content:center;
+    height:fit-content;
+    width:50%;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid brown;
+    display:flex;
+    flex-direction: column;
+
+
+}
+
+
+.uk-button{
+    background-color: rgba(238, 11, 11, 0.685);
+    margin:auto;
+    border-radius:10px;
+    font-weight: 500;
+    
+
+}
+.uk-button:hover{
+    background-color:white;
+    color:black;
+    transition:all 0.5s ease;
+    font-weight: 400;
+    border:2px solid rgba(238, 11, 11, 0.685);
+}
+@media screen and (max-width: 768px) {
+    .uk-contact-card{
+        height:98%;
+        width:95%;
+        margin-bottom: 10%;
+    }
+    .uk-contact1-card{
+        height:98%;
+        width:95%;
+        margin-bottom: 10%;
+    }
+    .uk-textarea{
+        width:10%;
+    }
+  }
+  .contact-heading{
+      color:white;
+  }
+  .uk-textarea{
+      margin:10px;
+      width:300px;
+      padding:10px;
+      border-radius: 10px;
+  }
+
+  .form-title{
+      font-size: 1.5rem;
+      color:#2e1559;
+      margin-bottom:20px;
+  }

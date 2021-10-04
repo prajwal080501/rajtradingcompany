@@ -5,9 +5,9 @@ const Footer = () => {
     <div>
       <footer className="footer">
         <div className="content has-text-centered">
-          <p>
-                      <strong>Raj Trading Company</strong> by{" "}
-            <p> <strong>Vivas Home Decor</strong> All Rights Reserved 2021 ©</p>
+          <p classsName="brand">
+            <strong>RAJ TRADING COMPANY</strong>
+            <p> All Rights Reserved 2021 ©</p>
           </p>
         </div>
       </footer>

@@ -15,33 +15,24 @@ import img11 from "./images/img11.jpg";
 const Carousel = () => {
   return (
       <>
-      <div className="heading">
-          <h2 className="title">Our Work</h2>
+      <div className="heading"  uk-scrollspy="cls:uk-animation-fade">
+          <h2 className="uk-title">Our Work</h2>
       </div>
-      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true" uk-slider="autoplay: true" uk-slider="autoplay-interval:1500" uk-scrollspy="cls: uk-animation-fade; target: .uk-slider; delay: 500; repeat: true">
 
-    <ul class="uk-slider-items uk-grid">
+    <ul class="uk-slider-items uk-grid" width="1800" height="1200">
     <li className="uk-width-3-4">
           <div className="uk-cover-container">
-            <img src={img1} alt="" uk-cover />
+            <img src={img11} alt="" uk-cover />
             <div className="uk-position-center uk-panel">
-              <h1>1</h1>
             </div>
           </div>
         </li>
-        <li className="uk-width-3-4">
-          <div className="uk-cover-container">
-            <img src={img2} alt="" uk-cover />
-            <div className="uk-position-center uk-panel">
-              <h1>2</h1>
-            </div>
-          </div>
-        </li>
+        
         <li className="uk-width-3-4">
           <div className="uk-cover-container">
             <img src={img3} alt="" uk-cover />
             <div className="uk-position-center uk-panel">
-              <h1>3</h1>
             </div>
           </div>
         </li>
@@ -49,7 +40,6 @@ const Carousel = () => {
           <div className="uk-cover-container">
             <img src={img4} alt="" uk-cover />
             <div className="uk-position-center uk-panel">
-              <h1>4</h1>
             </div>
           </div>
         </li>
@@ -57,58 +47,26 @@ const Carousel = () => {
           <div className="uk-cover-container">
             <img src={img5} alt="" uk-cover />
             <div className="uk-position-center uk-panel">
-              <h1>5</h1>
             </div>
           </div>
         </li>
-        <li className="uk-width-3-4">
-          <div className="uk-cover-container">
-            <img src={img6} alt="" uk-cover />
-            <div className="uk-position-center uk-panel">
-              <h1>6</h1>
-            </div>
-          </div>
-        </li>
+        
         <li className="uk-width-3-4">
           <div className="uk-cover-container">
             <img src={img7} alt="" uk-cover />
             <div className="uk-position-center uk-panel">
-              <h1>7</h1>
             </div>
           </div>
         </li>
-        <li className="uk-width-3-4">
-          <div className="uk-cover-container">
-            <img src={img8} alt="" uk-cover />
-            <div className="uk-position-center uk-panel">
-              <h1>8</h1>
-            </div>
-          </div>
-        </li>
+        
         <li className="uk-width-3-4">
           <div className="uk-cover-container">
             <img src={img9} alt="" uk-cover />
             <div className="uk-position-center uk-panel">
-              <h1>9</h1>
             </div>
           </div>
         </li>
-        <li className="uk-width-2-3">
-          <div className="uk-cover-container">
-            <img src={img10} alt="" uk-cover />
-            <div className="uk-position-center uk-panel">
-              <h1>10</h1>
-            </div>
-          </div>
-        </li>
-        <li className="uk-width-3-4">
-          <div className="uk-cover-container">
-            <img src={img11} alt="" uk-cover />
-            <div className="uk-position-center uk-panel">
-              <h1>11</h1>
-            </div>
-          </div>
-        </li>
+        
     </ul>
 
     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>

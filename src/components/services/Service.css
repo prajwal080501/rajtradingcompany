@@ -1,0 +1,24 @@
+.title{
+    font-family: 'Poppins', sans-serif;
+    color:#2e1559;
+    font-size:3rem;
+    font-weight: 400;
+    margin: 14px;
+}
+.card-container{
+    padding:50px;
+}
+.card{
+    margin:1%;
+}
+.card:hover{
+    transition: all 0.5s ease-in-out;
+   
+    border-radius: 10px;
+
+
+}
+.img-pop{
+    width:1600px;
+    height:230px;
+}
