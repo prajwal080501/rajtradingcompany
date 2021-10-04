@@ -8,7 +8,7 @@ const Service = () => {
     <div>
       <h1 className="uk-title">Services</h1>
       <CardGroup>
-        <Card>
+        <Card className="card">
           <Card.Img variant="top" src="https://source.unsplash.com/1600x900/?nature,water" />
           <Card.Body>
             <Card.Title>Resiential Painting</Card.Title>
