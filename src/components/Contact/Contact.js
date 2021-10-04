@@ -4,13 +4,9 @@ import "./Contact.css";
 const Contact = () => {
     return (
         <div className="uk-container">
-            <div>
-                <h3 className="title">Raj Trading Company</h3>
-                <h className="subtitle">Mail</h>
-                <p>praju.ladkat@gmail.com</p>
-                <h className="subtitle">Phone</h>
-                <p>9834477319</p>
-            </div>
+            <h2>Raj Trading Company</h2>
+            <h5 className="subtitle">Mail</h5>
+            <p>praju.ladkat@gmail.com</p>
         </div>
     )
 }
