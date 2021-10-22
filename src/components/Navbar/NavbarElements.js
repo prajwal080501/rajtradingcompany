@@ -1,0 +1,87 @@
+import styled, { css } from "styled-components/macro";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+export const Nav = styled.nav`
+margin-top: 0%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+
+`;
+
+export const NavLink = css`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition : all 0.5s ease;
+ 
+  }
+`;
+
+export const Logo = styled(Link)`
+  ${NavLink}
+  color: white;
+  font-style: bold;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: white;
+`;
+
+export const MenuBars = styled(FaBars)`
+display: none;
+
+
+@media screen and (max-width: 768px){
+    display: block;
+    color:  white;
+    height:30px;
+    width: 30px;
+    cursor: pointer;    
+    position: absolute;
+    margin-bottom: auto;
+    margin-top: auto;
+    right: 0;
+    transform: translate(-50%,25%);
+    font-size: 1rem;
+}
+`;
+export const NavMenu = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: -48px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+export const NavMenuLinks = styled(Link)`
+  ${NavLink}
+  list-style: none;
+  text-decoration: none;
+  color: white;
+
+  &:hover{
+   background-color: #ed8e2f;
+   color: white;
+   border-radius: 10px;
+  }
+`;
+export const NavBtn = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;

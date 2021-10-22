@@ -1,0 +1,54 @@
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+export const Button = styled(Link)`
+background: ${({ primary }) => (primary ? '#000d1a' : 'CD853F')};
+white-space: no-wrap;
+ouline: none;
+border-radius: 10px;
+border: none;
+min-width: 100px;
+max-width: 200px;
+cursor: default;
+text-decoration: none;
+list-style: none;
+transition: 0.5s;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: ${({ big }) => (big ? '16px 40px' : '14px 24px')};
+color: ${({ primary }) => (primary ? '#fff' : "#000d1a")};
+font-size: ${({ big }) => (big ? '20px' : '14px')};
+
+&:hover{
+    transform: translateY(-4px);
+}
+`
+export const Button2 = styled(Link)`
+background: ${({ primary }) => (primary ? '#ed8e2f' : 'CD853F')};
+white-space: no-wrap;
+ouline: none;
+border-radius: 10px;
+border: none;
+min-width: 100px;
+max-width: 200px;
+cursor: default;
+text-decoration: none;
+list-style: none;
+transition: 0.5s;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: ${({ big }) => (big ? '16px 40px' : '14px 24px')};
+color: ${({ primary }) => (primary ? '#fff' : "#000d1a")};
+font-size: ${({ big }) => (big ? '20px' : '14px')};
+
+&:hover{
+    transform: translateY(-4px);
+}
+@media screen and (max-width:768px){
+    width: 100%;
+    display: flex;
+    align-self: center;
+}
+`
