@@ -269,10 +269,11 @@ export const ContactLinkItem = styled.a`
   `
 
 export const ContactContainer = styled.div`
-width: 100vh;
+width: 100%;
 height: 100vh;
 display: flex;
 flex-direction: row;
+justiy-content-center;
 
 @media screen and (max-width:768px){
   display: flex;

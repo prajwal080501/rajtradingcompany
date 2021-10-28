@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import { SliderData } from "../../Data/SliderData";
 import GlobalStyle from "../../GlobalStyles/GlobalStyle";
-import { Parallax } from "react-parallax";
-import { motion } from "framer-motion";
 import "./Contact.css";
 
 
