@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { SliderData } from "../../Data/SliderData";
 import GlobalStyle from "../../GlobalStyles/GlobalStyle";
 import { Parallax } from "react-parallax";
+import { motion } from "framer-motion";
+import "./Contact.css";
+
 
 // import Container from 'react-bootstrap/Container'
 import Hero from "../Hero/Hero";
@@ -34,23 +37,37 @@ import img2 from "./contact.jpg";
 import { AiFillMail, AiFillPhone } from "react-icons/ai";
 import { HiOfficeBuilding } from "react-icons/hi";
 import { Button, Button2 } from "../Button/Button";
-import { LinkItem } from "../../Footer/FooterElements";
+import { LinkItem } from "../Footer/FooterElements";
 
 const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
+  const [heroSection, setHeroSection] = useState(false);
+
+  const scrollEffect = () => {
+    if (window.scrollY >=120) {
+      setHeroSection(true);
+    }
+    else {
+      setHeroSection(false);
+    }
+  }
+  window.addEventListener("scroll", scrollEffect);
+
   return (
     <>
+      
       <GlobalStyle />
-      <Parallax bgImage={img} strength={500}>
-        <ContactHeroSection>
-<ContactHeroImage src={img} alt="" />         
+      <ContactHeroSection className={heroSection ? "hero active" : "hero"} >
 
-          <ContactHeroContent>
-            <h1>Contact</h1>
-          </ContactHeroContent>
-
-        </ContactHeroSection>
-        </Parallax>
-      <ContactContainer>
+        <ContactHeroContent>
+          <h1>Contact</h1>
+        </ContactHeroContent>
+      </ContactHeroSection>
+      <ContactContainer
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+      >
         <ContactCard>
           <ContactTitle>Contact</ContactTitle>
           <MailContainer>

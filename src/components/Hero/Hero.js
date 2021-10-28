@@ -58,7 +58,7 @@ const Hero = ({ slides }) => {
                 <HeroSlide key={index}>
                   {index === current && (
                     <HeroSlider>
-                      <HeroImage src={slide.image} />
+                      <HeroImage style={{backdropFilter: 'blur(10px'}} src={slide.image} />
 
                       <HeroContent>
                         <h1>{slide.title}</h1>

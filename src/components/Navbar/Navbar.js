@@ -17,7 +17,7 @@ import "./Navbar.css";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = ({ toggle }) => {
-  const [play] = useSound(click, {volume : 0.15});
+  const [play] = useSound(click, { volume: 0.15 });
   const [navbar, setNavbar] = useState(false);
   const [logo, setLogo] = useState(false);
   const [menubar, setMenuBar] = useState(false);
@@ -29,6 +29,7 @@ const Navbar = ({ toggle }) => {
       setNavbar(false);
     }
   };
+  
   const changeLogoBackground = () => {
     if (window.scrollY >= 80) {
       setLogo(true);

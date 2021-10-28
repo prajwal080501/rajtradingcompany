@@ -11,8 +11,10 @@ import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
 import About from "./components/About/About";
 import Service from "./components/Service/Service";
 import Contact from "./components/Contact/Contact";
-import Footer from "./Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import Whatsapp from "./components/Whatsapp/Whatsapp";
+
+
 
 
 
@@ -47,6 +49,7 @@ function App() {
       </BrowserRouter>
       <Whatsapp />
       <Footer />
+      
     </>
   );
 }

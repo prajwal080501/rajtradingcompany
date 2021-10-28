@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5"
 import { IoMdArrowForward } from "react-icons/io";
+import cursor from "../Navbar/cursor.png";
 
 
 
@@ -64,6 +65,7 @@ width: 100vw;
 // opacity: 0.5;
 height: 100vh;
 object-fit: cover;
+backdrop-filter : blur(10px);
 background-attachment: fixed;
 `
 export const HeroContent = styled.div`
@@ -77,6 +79,8 @@ color: white;
 text-align: left;
 padding: 50px;
 
+
+
 h1{
     font-size:clamp(1rem, 8vw, 2rem);
     font-weight: 600;
@@ -86,6 +90,7 @@ h1{
     margin-bottom : 0.8rem;
     text-align: left;
 }
+
 
 p{
     margin-bottom: 1.2rem;
@@ -111,6 +116,7 @@ color: white;
 cursor: pointer;
 background: #000d1a;
 border-radius: 50px;
+cursor: url(${cursor}), auto;
 padding: 10px;
 margin-right: 1rem;
 user-select: none;

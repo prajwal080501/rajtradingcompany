@@ -1,0 +1,10 @@
+.hero.active{
+    opacity:0.3;
+    transition: all 0.5s linear;
+    border-radius: 10px;
+    transform: scale(0.8);
+}
+
+.hero{
+    transition: all 0.4s linear;
+}

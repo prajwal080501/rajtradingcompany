@@ -6,7 +6,7 @@ import Dropdown from "../Dropdown/Dropdown";
 import React, { useState } from 'react';
 import InfoSection from "../InfoSection/InfoSection";
 import { InfoData } from "../../Data/InfoData";
-import Footer from "../../Footer/Footer";
+import Footer from "../Footer/Footer";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 

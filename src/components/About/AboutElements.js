@@ -1,20 +1,26 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import img from "./contactimg.jpg";
 
 
-export const ContactHeroSection = styled.section`
-  height: 150vh;
+
+export const ContactHeroSection = styled.div`
+  height: 80vh;
   max-height: 1100px;
   position: relative;
   overflow: hidden;
   margin-top: 0px;
+  background-image: url(${img});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   border-radius: 0px 0px 15px 15px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
 &::before{
   backdrop-filter : blur(100px);
 
 }  
-  @media screen and (max-width: 768px){
-    height: 100vh;
+@media screen and (max-width: 768px){
+  height: 70vh;
 }
 `;
 
@@ -77,16 +83,16 @@ margin-top : 10%;
 margin-bottom: 10px;
 align-items: center;
 box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5), 0 8px 18px 0 rgba(0, 0, 0, 0.19);
-z-index: 100;
 background-clip: border-box;
 border: 2px solid transparent;
-
+z-index: 10;
+elevation: 10px;
 padding: 10px;
 backdrop-filter: blur(10px);
 border-radius:5%;
 
 @media screen and (max-width: 768px){
-    width: 100%;
+    width: 80%;
     height: fit-content;
     margin: auto;
     margin-bottom: 10px;

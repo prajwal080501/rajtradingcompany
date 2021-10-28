@@ -1,0 +1,19 @@
+.hero.active{
+    opacity:0.3;
+    transition: all 0.5s linear;
+    border-radius: 10px;
+    transform: scale(0.9);
+    backdrop-filter: blur(10px);
+
+    
+}
+
+.hero{
+    transition: all 0.4s linear;
+}
+
+@media screen and (max-width: 768px){
+    .hero.active{
+        transform: scale(1);
+    }
+}

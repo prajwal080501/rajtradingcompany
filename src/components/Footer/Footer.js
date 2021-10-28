@@ -64,11 +64,11 @@ const Footer = () => {
             style={{
               color: "#fff",
               fontWeight: "800",
-          fontStyle: "cursive",
-              textAlign: 'center'
+              fontStyle: "cursive",
+          textAlign: 'center',
+              textShadow: '1px 1px 5px #000'
             }}
-          >
-            Built with ❤️ by Prajwal Ladkat.{" "}
+          > Developed with ❤️ by <strong> Prajwal Ladkat</strong> .{" "}
           </Slogan>
     </FooterWrapper>
   );

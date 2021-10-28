@@ -2,6 +2,7 @@ import styled, { css } from "styled-components/macro";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import cursor from "./cursor.png";
 export const Nav = styled.nav`
 margin-top: 0%;
   height: 80px;
@@ -18,9 +19,9 @@ export const NavLink = css`
   color: #fff;
   display: flex;
   align-items: center;
+  cursor: url(${cursor}), auto;
   padding: 0 1rem;
   height: 100%;
-  cursor: pointer;
   font-weight: 700;
   text-decoration: none;
   transition : all 0.5s ease;
@@ -31,7 +32,7 @@ export const NavLink = css`
 export const Logo = styled(Link)`
   ${NavLink}
   color: white;
-  font-style: bold;
+  font-style: italic;
   font-weight: 900;
   font-size: 1.3rem;
   color: white;
@@ -46,7 +47,7 @@ display: none;
     color:  white;
     height:30px;
     width: 30px;
-    cursor: pointer;    
+    cursor: url("./cursor.png"), auto;    
     position: absolute;
     margin-bottom: auto;
     margin-top: auto;
@@ -69,10 +70,10 @@ export const NavMenuLinks = styled(Link)`
   list-style: none;
   text-decoration: none;
   color: white;
+  font-style: bold;
 
   &:hover{
-   background-color: #ed8e2f;
-   color: white;
+   color: #ed8e2f;
    border-radius: 10px;
   }
 `;

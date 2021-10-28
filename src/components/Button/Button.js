@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import cursor from "../Navbar/cursor.png";
 
 export const Button = styled(Link)`
 background: ${({ primary }) => (primary ? '#000d1a' : 'CD853F')};
@@ -19,6 +20,7 @@ align-items: center;
 padding: ${({ big }) => (big ? '16px 40px' : '14px 24px')};
 color: ${({ primary }) => (primary ? '#fff' : "#000d1a")};
 font-size: ${({ big }) => (big ? '20px' : '14px')};
+cursor: url(${cursor}), auto;
 
 &:hover{
     transform: translateY(-4px);

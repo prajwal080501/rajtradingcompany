@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import img from "./contactimg.jpg";
 
 export const ServiceHeroSection = styled.section`
   height: 80vh;
@@ -6,7 +7,10 @@ export const ServiceHeroSection = styled.section`
   position: relative;
   overflow: hidden;
   margin-top: 0px;
-  border-radius: 0px 0px 15px 15px;
+  background-image: url(${img});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   background-color: red;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
 &::before{
@@ -73,7 +77,7 @@ padding: 10px;
 `
 
 export const ServiceContainer = styled.div`
-width: 100vh;
+width: 100%;
 height: 100vh;
-border: 2px solid black;
-`
+`;
+

@@ -1,18 +1,22 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import img from "./contactimg.jpg";
 
 
-export const ContactHeroSection = styled.section`
+
+export const ContactHeroSection = styled.div`
   height: 80vh;
   max-height: 1100px;
   position: relative;
   overflow: hidden;
   margin-top: 0px;
-  background-color: red;
+  background-image: url(${img});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  backdrop-filter : blur(10px);
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
-&::before{
-  backdrop-filter : blur(100px);
 
-}  
   @media screen and (max-width: 768px){
     height: 70vh;
 }
@@ -23,6 +27,7 @@ export const ContactHeroImage = styled.img`
   top: 0;
   left: 0;
   width: 100vw;
+
   // opacity: 0.5;
   height: 100vh;
   object-fit: cover;
@@ -264,7 +269,7 @@ export const ContactLinkItem = styled.a`
   `
 
 export const ContactContainer = styled.div`
-widthL 100vh;
+width: 100vh;
 height: 100vh;
 display: flex;
 flex-direction: row;
@@ -284,12 +289,13 @@ flex-direction: column;
 justify-self: flex-start;
 padding: 15px;
 text-align: center;
-align-itmems: center;
+align-items: center;
 background-image: linear-gradient(0deg, rgb(205, 132, 63) 0%, rgb(205, 132, 73) 50%, rgb(205, 132, 83) 100% );
 
 @media screen and (max-width: 768px) {
   width: fit-content;
   height: 80vh;
+  padding: 15px;
 }
 `;
 
@@ -300,7 +306,7 @@ text-align: center;
 font-weight: 800;
 margin-top: 15%;
 @media screen and (max-width: 768px) {
-  margin-top: 15%;
+  margin-top: 18%;
 }
 `;
 export const ContactSubHeading = styled.h3`
@@ -327,6 +333,7 @@ align-itmems: center;
 @media screen and (max-width: 768px){
   width: fit-content;
   height: 90vh;
+  padding: 15px;
 }
 `
 export const MapButton = styled.a`
