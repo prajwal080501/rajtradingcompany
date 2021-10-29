@@ -10,12 +10,15 @@ export const ContactHeroSection = styled.div`
   position: relative;
   overflow: hidden;
   margin-top: 0px;
-  background-image: url(${img});
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  ), url(${img});
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  backdrop-filter : blur(10px);
+  border-radius: 0px 0px 15px 15px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
+  background-attachment: fixed;
 
   @media screen and (max-width: 768px){
     height: 70vh;
@@ -85,14 +88,15 @@ align-items: center;
 `
 
 export const FormContainer = styled.form`
-padding: 80px;
+padding: 60px;
 align-items: center;
-msrgin-top: -5%;
+margin-top: -15%;
 
 
 @media screen and (max-width: 768px){
   width: fit-content;
   justify-self: center;
+  overflow: hidden;
 
 }
 
@@ -110,7 +114,7 @@ margin-top: 10px;
   justify-self: flex-start;
   justify-content: center;
   align-items: center;
-
+  margin:auto;
 }
 `
 export const Label = styled.label`
@@ -121,6 +125,7 @@ font-weight: 600;
 margin-bottom:-5px;
 color: #000;
 @media screen and (max-width:768px){
+  margin-top:12px;
 }
 
 `
@@ -134,7 +139,7 @@ height: 50px;
 width: 100%;
 margin-top: 15px;
 @media only screen and (max-width:768px){
-  width: 160%;
+  width: 120%;
   display: flex;
   justify-self: center;
 }
@@ -291,12 +296,13 @@ justify-self: flex-start;
 padding: 15px;
 text-align: center;
 align-items: center;
-background-image: linear-gradient(0deg, rgb(205, 132, 63) 0%, rgb(205, 132, 73) 50%, rgb(205, 132, 83) 100% );
+background-color: #1a5ef0;
 
 @media screen and (max-width: 768px) {
   width: fit-content;
   height: 80vh;
   padding: 15px;
+  overflow: hidden;
 }
 `;
 
@@ -315,7 +321,7 @@ color: white;
 font-weight: 600;
 margin-top: 4%;
 `;
-export const ContactSummary = styled.p`
+export const ContactSummary = styled.a`
 color: white;
 font-weight: 500;
 padding: 10px;
@@ -359,4 +365,12 @@ font-size: ${({ big }) => (big ? '20px' : '14px')};
 &:hover{
     transform: translateY(-4px);
 }
+`
+
+export const MessageBox = styled.textarea`
+width: 100%;
+height: 100px;
+padding: 10px;
+border-radius: 10px;
+
 `

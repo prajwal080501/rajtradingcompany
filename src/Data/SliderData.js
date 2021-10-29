@@ -5,27 +5,42 @@ import imageFour from "./Images/imageFour.jpg";
 
 export const SliderData = [
   {
-    title: "Town Planning Civil Law",
+    title: "Residential Painting Work",
     path: "/projects",
     image: imageOne ,
     alt: "Project Site",
   },
   {
-    title: "Legal aspects related to Import & Export",
+    title: "Wallpapers and Textures",
     path: "/projects",
     image:  imageTwo ,
     alt: "Project Site",
   },
   {
-    title: "PMRDA Office related all legal aspects ",
+    title: "Industrial Painting Work",
     path: "/projects",
     image:  imageThree ,
     alt: "Project Site",
   },
   {
-    title: "TDR and land acquisition issues",
+    title: "POP & Gypsum",
     path: "/projects",
     image: imageFour ,
     alt: "Project Site",
+  },
+];
+export const ImageData = [
+  {
+    
+    image: imageOne 
+  },
+  {
+    image:  imageTwo ,
+  },
+  {
+    image:  imageThree 
+  },
+  {
+    image: imageFour 
   },
 ];

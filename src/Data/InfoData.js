@@ -1,12 +1,12 @@
-import imageOne from "./Images/imageOne.jpg";
+import imageFive from "./Images/imageFive.jpg";
 import imageTwo from "./Images/imageTwo.jpg";
 
 export const InfoData = {
-    heading: 'Challenging Notices and giving replies to any Government Offices',
+    heading: 'Filling colors to make your dream house come true!',
     paraOne : "Challenging the Notices and giving replies to any Government Offices ",
-    paraTwo : "Represent in front of all quasi judicial authorities of Local authorities, PMRDA , MIDC, MSEDCL, GST, Trusts, All licencing Authorities, Copyright & Patent Offices , Any critical technical aspects",
+    paraTwo : "More than 40 years of experience in industry. Designing modern and elegant looking houses, offices with unique color combinations and eye catchy textures and wallpapers.",
     buttonLabel:"View More ",
-    image : imageOne,
+    image : imageFive,
     reverse: false,
     delay: 100
 };

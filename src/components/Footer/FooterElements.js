@@ -5,9 +5,10 @@ export const FooterWrapper = styled.section`
   max-width: 1500px;
   padding: 2rem 48px 40px;
   box-sizing: content-box;
-  background-color: #676cf5;
+  background-color: #000d1a;
   height: 40%;
   background-color:#676cf5npm staa;
+  border-radius: 10px 10px 0px 0px;
 
 
   @media screen and (max-width: 640px) 
@@ -19,6 +20,7 @@ export const FooterWrapper = styled.section`
 
 export const LinkItem = styled.a`
 	line-height: 30px;
+	font-size: 0.8rem;
 	color: rgba(255, 255, 255, 0.75);
 	margin-bottom: 16px;
 	transition: .3s ease;
@@ -29,25 +31,20 @@ export const LinkItem = styled.a`
 	&:hover {
 		color:#FECDE8;
 		left: 6px;
-		font-size: 22px;
-		border-bottom: 1px solid #fff;
+		transform: translateY(-2px);
 	}
 
- @media screen and (max-width:768px) {
-		font-size: 2px;
-		line-height: 28px;
-		display: flex;
-		&:hover{
-			font-size: 14px;
-		}
-	}
 
-	@media @media screen and (max-width: 640px){
-		font-size: 4px;
+
+	@media screen and (max-width: 768px){
+		font-size: 0.54rem;
 		line-height: 14px;
 		margin-bottom: 8px;
 		display: flex;
 		align-items: center;
+		margin-right:5px;
+		padding: 15px;
+		text-decoration: none;
 	}
 `
 
@@ -128,7 +125,6 @@ export const SocialContainer = styled.div`
 
 
 export const LinkList = styled.ul`
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: grid;
 	grid-template-columns: repeat(3, minmax(85px, 220px));
 	gap: 40px;
@@ -161,6 +157,9 @@ export const LinkColumn = styled.div`
 	align-items: center;
 	align-self:center;
 	justify-self: center;
+	@media screen and (max-width: 768px){
+		padding: 5px;
+	}
 `
 export const LinkTitle = styled.h4`
 	font-style: normal;

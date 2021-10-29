@@ -22,18 +22,18 @@ const Footer = () => {
     <FooterWrapper>
       <LinkList>
         <LinkColumn>
-          <LinkTitle style={{ color: "#f0e79d" }}>Call</LinkTitle>
-          <LinkItem style={{ fontSize: "0.8rem" }} href="tel:+918329399576">
-            +918329399576
+          <LinkTitle style={{ color: "#f0e79d"  }}>Call</LinkTitle>
+          <LinkItem  href="tel:+919922991836">
+            +919922991836
           </LinkItem>
         </LinkColumn>
         <LinkColumn>
           <LinkTitle style={{ color: "#f0e79d" }}>Email</LinkTitle>
           <LinkItem
-            style={{ fontSize: "0.8rem", marginLeft: "38px" }}
-            href="mailto:contact@jsmastery.com"
+           
+            href="mailto:raj_tradingcompany@yahoo.co.in"
           >
-            rajan.ladkat@gmail.com
+            raj_tradingcompany@yahoo.co.in
           </LinkItem>
         </LinkColumn>
       </LinkList>
@@ -46,18 +46,11 @@ const Footer = () => {
               fontStyle: "cursive",
             }}
           >
-            Adv Rajan Ladkat 2021©
+            Raj Trading Company 2021©
           </Slogan>
           
         </CompanyContainer>
-        <SocialContainer>
-          <LinkedinSocialIcons href="https://www.linkedin.com/in/prajwal-ladkat-0389931a7/">
-            <AiFillLinkedin />
-          </LinkedinSocialIcons>
-          <InstagramSocialIcons href="https://www.instagram.com/prajwalladkat0805/">
-            <AiFillInstagram />
-          </InstagramSocialIcons>
-        </SocialContainer>
+        
       </SocialIconsContainer>
       <BackToTopButton>Back</BackToTopButton>
       <Slogan
@@ -68,7 +61,7 @@ const Footer = () => {
           textAlign: 'center',
               textShadow: '1px 1px 5px #000'
             }}
-          > Developed with ❤️ by <strong> Prajwal Ladkat</strong> .{" "}
+          > Developed with ❤️ by <strong> <a target="_blank" href="https://github.com/"style={{textDecoration: 'none', color: 'orange'}} href="https://prajwalladkat.tech">Prajwal Ladkat</a> </strong> .{" "}
           </Slogan>
     </FooterWrapper>
   );

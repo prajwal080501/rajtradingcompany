@@ -8,3 +8,70 @@
 .hero{
     transition: all 0.4s linear;
 }
+
+.card-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+.card{
+    width: 35%;
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.01);
+    border-radius: 10px;
+    transition: all 0.5s linear;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-12px);
+    transition: all 0.5s linear;
+}
+.card.card-image:hover{
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.01);
+    transition: all 0.5s linear;
+}
+.card-title{
+    font-size: 1.5em;
+    font-weight: 800;
+    color: black;
+    margin-top: 10px;
+}
+.card-text{
+    text-align: left;
+    color: black;
+    margin-top: 5px;
+    letter-spacing: .5px;
+    margin-bottom: 5px;
+}
+
+.card-image{
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: all 0.5s linear;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .card-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .card{
+        width: 90%;
+        margin: 15px;
+        padding: 10px;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10px;
+    }
+}

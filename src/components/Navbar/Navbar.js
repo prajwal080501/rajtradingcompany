@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GiCircleClaws } from "react-icons/gi";
+import {AiFillFormatPainter } from 'react-icons/ai'
 import {
   Logo,
   MenuBars,
@@ -9,7 +10,7 @@ import {
   NavMenuLinks,
 } from "./NavbarElements";
 import { menuData } from "../../Data/MenuData";
-import { Button } from "../Button/Button";
+import { Button, Button2 } from "../Button/Button";
 import useSound from "use-sound";
 import click from "./sounds/pop-down.mp3";
 import "./Navbar.css";
@@ -53,10 +54,10 @@ const Navbar = ({ toggle }) => {
       <Nav className={navbar ? "navbar active" : "navbar"}>
         <Logo className={logo ? "logo active" : "logo"} to="/">
           {" "}
-          <GiCircleClaws
-            style={{ marginRight: "10px", color: "#676cf5", fontWeight: "900" }}
+          <AiFillFormatPainter
+            style={{ marginRight: "20px", color: "white", fontWeight: "900" }}
           />
-          Adv Rajan Ladkat
+          Raj Trading Company
         </Logo>
         <MenuBars
           className={menubar ? "menubar active" : "menubar"}

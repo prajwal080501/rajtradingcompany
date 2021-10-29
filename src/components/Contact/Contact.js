@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { SliderData } from "../../Data/SliderData";
 import GlobalStyle from "../../GlobalStyles/GlobalStyle";
 import "./Contact.css";
+import emailjs from "emailjs-com";
 
 
 // import Container from 'react-bootstrap/Container'
@@ -34,10 +35,12 @@ import img from "./contactimg.jpg";
 import img2 from "./contact.jpg";
 import { AiFillMail, AiFillPhone } from "react-icons/ai";
 import { HiOfficeBuilding } from "react-icons/hi";
-import { Button, Button2 } from "../Button/Button";
+import { Button, Button2, Button3 } from "../Button/Button";
 import { LinkItem } from "../Footer/FooterElements";
 
 const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
+
+ 
   const [heroSection, setHeroSection] = useState(false);
 
   const scrollEffect = () => {
@@ -49,7 +52,26 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
     }
   }
   window.addEventListener("scroll", scrollEffect);
+  function sendEmail(e) {
+    e.preventDefault();
 
+    emailjs
+      .sendForm(
+        "service_ljjvnrm",
+        "template_wvvzw7r",
+        e.target,
+        "user_rIpklSkS5Ci1szudsqqVg"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
   return (
     <>
       
@@ -70,18 +92,18 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
           <ContactTitle>Contact</ContactTitle>
           <MailContainer>
             <ContactSubHeading>Mail</ContactSubHeading>
-            <ContactSummary>
+            <ContactSummary  href="mailto:raj_tradingcompany@yahoo.co.in">
               {" "}
               <AiFillMail />
-              rajan.ladkat@gmail.com
+              raj_tradingcompany@yahoo.co.in
             </ContactSummary>
           </MailContainer>
           <MailContainer>
             <ContactSubHeading>Phone</ContactSubHeading>
-            <ContactSummary>
+            <ContactSummary  href="tel:+919922991836">
               {" "}
               <AiFillPhone />
-              +918329399576
+              +919922991836
             </ContactSummary>
           </MailContainer>
           <MailContainer>
@@ -89,11 +111,10 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
             <ContactSummary>
               {" "}
               <HiOfficeBuilding />
-              Sadguru Hambirbaba Society opposite Novotel Hotel adjacent
-              Lokmanya Tilak School Ramwadi Pune 14
+              Sukhsagar Trimurty Colony behind Sadhana Society Near Ganesh Temple, Hadapsar Pune 28
             </ContactSummary>
             <MapButton
-              href="https://maps.google.com/?cid=7960314072179627187&entry=gps"
+              href="https://maps.app.goo.gl/qxiNg6JS8GJpmkTo6"
               primary="true"
             >
               View on map
@@ -107,30 +128,37 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
               fontSize: "2rem",
               textAlign: "center",
               fontWeight: "900",
+              marginTop: '1%',
+              marginBottom: '5%',
             }}
           >
             Contact Us
           </h2>
-          <FormContainer>
+          <FormContainer type="submit" onSubmit={sendEmail}>
             <InputContainer>
               <Label value="Name">Name</Label>
-              <Input type="text" placeholder="Name"></Input>
+              <Input type="text" placeholder="Name" name="name"></Input>
             </InputContainer>
             <InputContainer>
               <Label value="Name">Email</Label>
-              <Input type="email" placeholder="E-mail"></Input>
+              <Input type="email" placeholder="E-mail" name="email"></Input>
             </InputContainer>
             <InputContainer>
               <Label value="Name">Phone</Label>
-              <Input type="number" placeholder="Phone Number"></Input>
+              <Input type="phone" placeholder="Phone Number" name="number"></Input>
             </InputContainer>
             <InputContainer>
-              <Button2
+              <Label value="Name">Write to us.</Label>
+              <TextArea type="text" placeholder="Message.." name="message"></TextArea>
+            </InputContainer>
+            <InputContainer>
+              <Button3
+                type="submit"
                 style={{ width: "30%", marginTop: "10px", marginTop: "15px" }}
                 primary="true"
               >
                 Submit
-              </Button2>
+              </Button3>
             </InputContainer>
           </FormContainer>
         </FormCard>

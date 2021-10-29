@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { AiFillMessage } from "react-icons/ai";
 
 
 
@@ -10,7 +11,7 @@ export const WhatsappContainer = styled.a`
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #25d366;
+  background-color: #1a5ef0;
   color: #fff;
   border-radius: 50px;
   text-align: center;
@@ -24,9 +25,11 @@ export const WhatsappContainer = styled.a`
       transition: all 0.5s linear ;
       cursor: pointer;
       color: #fff;
-      background-color: #25d366;
+      background-color: #1a5ef0;
       width: 65px;
       height: 65px;
+      
+
   }
 
   @media screen and (max-width: 768px) {
@@ -38,7 +41,7 @@ export const WhatsappContainer = styled.a`
   }
 `;
 
-export const WhatsappIcon = styled(IoLogoWhatsapp)`
+export const WhatsappIcon = styled(AiFillMessage)`
   margin-top: 16px;
 
   @media screen and (max-width: 768px) {

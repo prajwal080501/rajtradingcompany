@@ -3,7 +3,7 @@ import { IoMdArrowForward } from "react-icons/io";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import { Button, Button2 } from "../Button/Button";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
+import "./Hero.css";
 import {
   Arrow,
   HeroContent,
@@ -57,21 +57,11 @@ const Hero = ({ slides }) => {
              
                 <HeroSlide key={index}>
                   {index === current && (
-                    <HeroSlider>
-                      <HeroImage style={{backdropFilter: 'blur(10px'}} src={slide.image} />
+                    <HeroSlider  >
+                      <HeroImage  src={slide.image} />
 
                       <HeroContent>
                         <h1>{slide.title}</h1>
-
-                        <Button2
-                          css={`
-                            max-widht: 60px;
-                          `}
-                          primary="true"
-                          to={slide.path}
-                        >
-                          Visit <Arrow />
-                        </Button2>
                       </HeroContent>
                     </HeroSlider>
                   )}
@@ -79,8 +69,8 @@ const Hero = ({ slides }) => {
           );
         })}
         <SliderButtons>
-          <PrevArrow onClick={PrevSlide} />
-          <NextArrow onClick={NextSlide} />
+          <PrevArrow style={{color:'white'}} onClick={PrevSlide} />
+          <NextArrow  style={{color:'white'}} onClick={NextSlide} />
         </SliderButtons>
       </HeroWrappper>
     </HeroSection>

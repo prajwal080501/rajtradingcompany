@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "./contactimg.jpg";
+import img from "./bgimg.jpg";
 
 
 
@@ -9,7 +9,10 @@ export const ContactHeroSection = styled.div`
   position: relative;
   overflow: hidden;
   margin-top: 0px;
-  background-image: url(${img});
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  ), url(${img});
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -72,69 +75,162 @@ export const ContactHeroContent = styled.div`
     text-align: left;
   }
 `;
-
-export const Card = styled.div`
-width: 80vh;
-height: fit-content;
-background-color: #f5a23698;
-color: white;
-margin: auto;
-margin-top : 10%;
-margin-bottom: 10px;
-align-items: center;
-box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5), 0 8px 18px 0 rgba(0, 0, 0, 0.19);
-background-clip: border-box;
-border: 2px solid transparent;
-z-index: 10;
-elevation: 10px;
-padding: 10px;
-backdrop-filter: blur(10px);
-border-radius:5%;
-
-@media screen and (max-width: 768px){
-    width: 80%;
-    height: fit-content;
-    margin: auto;
-    margin-bottom: 10px;
-    margin-top:15%;
-}
-`;
-export const ImageContainer = styled.img`
-display: flex;
-justify-self: center;
-border-radius: 50%;
-margin: auto;
-margin-top: 14px;
-width: 180px;
-height: auto;
-
-border: 3px solid #fff;
-`;
-export const NameContainer = styled.h2`
-color: white;
-margin-top: 10px;
-font-weight: 700;
-font-size: 1.5rem;
-text-align: center;
-padding: 5px;
-letter-spacing:1px;
-font-family: 'Roboto', sans-serif;
-`;
-export const DegreeContainer = styled.h4`
-color: white;
-margin-top: 10px;
-font-weight: 700;
-font-size: 1rem;
-text-align: center;
-padding: 5px;
-letter-spacing:1px;
-font-family: 'Roboto', sans-serif;
-`;
-export const TextContainer = styled.div`
-margin: auto;
+export const AboutContaner = styled.div`
+width: 100%;
+height: 80vh;
 display: flex;
 flex-direction: row;
+justiy-content-center;
+
+@media screen and (max-width:768px){
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+`;
+export const AboutCard = styled.div`
+width: 40%;
+height: 80vh;
+display: flex;
+flex-direction: column;
+justify-self: flex-start;
+padding: 15px;
+text-align: center;
 align-items: center;
-justify-content: center;
+background-image: linear-gradient(0deg, #fff -10%, rgb(255, 255, 255) 50%, #fff 100% );
+
+@media screen and (max-width: 768px) {
+  width: 100%;
+  height: 80vh;
+  padding: 15px;
+}
+`;
+export const CompanyCard = styled.div`
+width: 60%;
+height: 80vh;
+color: white;
+display: flex;
+flex-direction: column;
+padding: 25px;
+margin-bottom: 17px;
+text-align: center;
+box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
+background-color: #1a5ef0;
+align-itmems: center;
+@media screen and (max-width: 768px){
+  width: 95%;
+  height: 80vh;
+  padding: 15px;
+  overflow: scroll;
+  display: flex;
+  justify-self:center;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
 `
 
+export const Container = styled.div`
+width: 100%;
+height: 80vh;
+display: flex;
+flex-direction: row;
+
+@media screen and (max-width: 768px){
+  display: flex;
+  flex-direction: column;
+}
+`
+
+export const ColumnRight = styled.div`
+width: 40%;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-self: flex-start;
+padding: 10px;
+align-items: center;
+
+@media screen and (max-width: 768px){
+  width: 80%;
+  height: 300px;
+  align-items: center;
+
+}
+`;
+export const ColumnLeft = styled.div`
+width: 60%;
+height: 100vh;
+border: 2px solid black;
+`;
+export const Image = styled.img`
+width: 200px;
+height: 200px;
+border-radius:50%;
+margin: auto;
+margin-top: 80px;
+border: 3px solid #5433ff;
+box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
+`
+
+export const ImageContainer = styled.div`
+width: fit-content;
+height: 30%;
+`
+
+export const NameTitle = styled.h2`
+color; black;
+font-size:2rem;
+font-family: 'Architects Daughter', serif;
+margin: auto;
+padding: 15px;
+margin-top: -9%;
+`
+export const Position = styled.h4`
+color; black;
+font-family: 'Roboto Daughter', serif;
+margin: auto;
+padding: 10px;
+margin-top: -19%;
+`;
+
+export const Content = styled.p`
+text-align: left;
+color; white;
+  margin: auto;
+  padding: 10px;
+margin-top: 15px;
+letter-spacing:1px;
+font-weight: 700;
+@media screen and (max-width: 768px) {
+  letter-spacing: 1.5px;
+  font-style: normal;
+  text-align: center;
+  padding: 15px;
+  letter-spacing: 1px;
+
+}
+
+
+`
+
+export const Title = styled.h2`
+color; white;
+font-size:2rem;
+margin-top: 50px;
+text-align: left;
+font-weight: 900;
+
+@media screen and (max-width: 768px) {
+  margin-top: 8px;
+  text-align; center;
+  margin: auto;
+}
+`
+
+export const Sign = styled.h2`
+margin-top: 10px;
+text-align: right;
+font-size:1rem;
+font-family: 'Architects Doughter', cursive;
+`

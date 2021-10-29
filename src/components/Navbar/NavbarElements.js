@@ -12,6 +12,7 @@ margin-top: 0%;
   z-index: 100;
   position: fixed;
   width: 100%;
+  backdrop-filter: blur(30px) grayscale(5%);
 
 `;
 
@@ -26,6 +27,11 @@ export const NavLink = css`
   text-decoration: none;
   transition : all 0.5s ease;
  
+  @media screen and (max-width:768px){
+    margin-right:2px;
+    letter-spacing:1px;
+    font-size: 1rem;
+    margin-left:-6px
   }
 `;
 
@@ -36,6 +42,7 @@ export const Logo = styled(Link)`
   font-weight: 900;
   font-size: 1.3rem;
   color: white;
+  
 `;
 
 export const MenuBars = styled(FaBars)`
@@ -73,7 +80,7 @@ export const NavMenuLinks = styled(Link)`
   font-style: bold;
 
   &:hover{
-   color: #ed8e2f;
+   color: #000d1a;
    border-radius: 10px;
   }
 `;

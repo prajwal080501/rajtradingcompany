@@ -31,7 +31,6 @@ z-index: 1;
 width: 100%;
 height: 100%;
 
-
 `
 export const HeroSlider = styled.div`
 position: absolute;
@@ -61,16 +60,22 @@ export const HeroImage = styled.img`
 position :absolute;
 top: 0;
 left: 0;
+transition: all 0.5s ease;
 width: 100vw;
-// opacity: 0.5;
+ background: #000;
+ background-blend-mode: darken;
 height: 100vh;
 object-fit: cover;
-backdrop-filter : blur(10px);
 background-attachment: fixed;
+
+&:hover{
+    transform: scale(1.1);
+}
 `
 export const HeroContent = styled.div`
 position: relative;
 z-index:10;
+text-shadow: 8px 8px 10px #000;
 display: flex;
 flex-direction: column;
 max-width: 1600px;
@@ -78,6 +83,9 @@ width: calc(100%-100px);
 color: white;
 text-align: left;
 padding: 50px;
+font-weight: 800;
+
+
 
 
 
@@ -138,4 +146,12 @@ ${ArrowButtons}
 
 export const Arrow = styled(IoMdArrowForward)`
 margin-left:.5rem
+`
+
+export const Video = styled.video`
+position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 `

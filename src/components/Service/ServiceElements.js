@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "./contactimg.jpg";
+import img from "./house.jpg";
 
 export const ServiceHeroSection = styled.section`
   height: 80vh;
@@ -7,7 +7,10 @@ export const ServiceHeroSection = styled.section`
   position: relative;
   overflow: hidden;
   margin-top: 0px;
-  background-image: url(${img});
+  background-image:linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  ), url(${img});
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -80,4 +83,51 @@ export const ServiceContainer = styled.div`
 width: 100%;
 height: 100vh;
 `;
+
+//service-card container
+export const ServiceCardHolder = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  border: 2px solid black;
+  width: 100%;
+  height: auto;
+`
+//service-card
+
+export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  height: 50vh;
+  border-radius: 10px;
+  margin: 10px;
+`
+//card-title: Card
+export const CardTitle = styled.h3`
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: Left;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (max-width: 768px){
+    font-size: 1.2rem;
+  }
+`
+
+//cardimage
+export const CardImage = styled.img`
+  width: cover;
+  height: 60%;
+  margin-top: -80px;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+
+`
 

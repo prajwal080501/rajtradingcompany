@@ -3,16 +3,15 @@
 
 .navbar.active {
   height: 60px;
-  background: white;
+  background: #f79354;
   border-radius: 0px 0px 5px 5px;
   color: black;
   transition: all 0.5s linear; 
-   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
 
 
 }
 .navbar.menuactive {
-  color: black;
+  color: white;
 }
 .navbar {
   height: 80px;
@@ -39,7 +38,7 @@
 
 .logo.active {
   transition: all 0.5s linear;
-  color: #000;
+  color: #fff;
   border: 1px solid transparent !important;
   font-weight: 1500;
 }
@@ -62,7 +61,7 @@
 .menubar.active {
   height: 30px;
   transition: all 0.5s linear;
-  color: black;
+  color: white;
   transition: all 0.5s linear;
   margin-top: -5px !important;
   

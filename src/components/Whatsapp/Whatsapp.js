@@ -9,7 +9,7 @@ const Whatsapp = () => {
     const [play] = useSound(whatsapp, {volume : 0.002});
 
     return (
-        <WhatsappContainer onClick={play} onMouseEnter={play} href="https://wa.me/+918329399576">
+        <WhatsappContainer onClick={play} onMouseEnter={play} href="https://wa.me/+919922991836">
             <WhatsappIcon />
         </WhatsappContainer>
     )

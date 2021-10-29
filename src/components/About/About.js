@@ -1,5 +1,26 @@
-import React, {useState} from 'react'
-import { Card, ContactHeroContent, ContactHeroImage, ContactHeroSection, DegreeContainer, ImageContainer, NameContainer, TextContainer } from './AboutElements';
+import React, { useState } from "react";
+import {
+  AboutCard,
+  AboutContaner,
+  Card,
+  ColumnLeft,
+  ColumnRight,
+  CompanyCard,
+  ContactHeroContent,
+  ContactHeroImage,
+  ContactHeroSection,
+  Container,
+  Content,
+  DegreeContainer,
+  Image,
+  ImageContainer,
+  NameContainer,
+  NameTitle,
+  Position,
+  Sign,
+  TextContainer,
+  Title,
+} from "./AboutElements";
 import styled from "styled-components";
 import { FaUserAlt } from "react-icons/fa";
 import { GiCircleClaws } from "react-icons/gi";
@@ -7,42 +28,75 @@ import "./About.css";
 
 import GlobalStyle from "../../GlobalStyles/GlobalStyle";
 import img from "./contactimg.jpg";
-import profile from "./profile.jpg"
+import profile from "./profile.jpg";
 import { BsFillAwardFill } from "react-icons/bs";
-import { ContactContainer } from '../Contact/ContactElements';
+import {
+  ContactCard,
+  ContactSubHeading,
+  ContactSummary,
+  ContactTitle,
+  FormCard,
+  FormContainer,
+  Input,
+  InputContainer,
+  Label,
+  MailContainer,
+  MapButton,
+} from "../Contact/ContactElements";
+import { Button2 } from "../Button/Button";
 
 const About = () => {
   const [heroSection, setHeroSection] = useState(false);
   const scrollEffect = () => {
-    if (window.scrollY >=250) {
+    if (window.scrollY >= 250) {
       setHeroSection(true);
-    }
-    else {
+    } else {
       setHeroSection(false);
     }
-  }
+  };
   window.addEventListener("scroll", scrollEffect);
-    return (
-        <>
-            <GlobalStyle />
-        <ContactHeroSection
-          className={heroSection ? "hero active" : "hero"}>
+  return (
+    <>
+      <GlobalStyle />
+      <ContactHeroSection className={heroSection ? "hero active" : "hero"}>
         <ContactHeroContent>
-            <h1>About</h1>
-          </ContactHeroContent>
-          
-        </ContactHeroSection>
-        <ContactContainer>
-          <Card>
-              <ImageContainer src={profile} />
-              <TextContainer><FaUserAlt/> <NameContainer>Adv Rajan Ladkat</NameContainer></TextContainer>
-              <TextContainer><BsFillAwardFill/> <DegreeContainer>Diploma in Cyber Laws <br /> BA LLB</DegreeContainer></TextContainer>
-              <TextContainer><BsFillAwardFill/> <DegreeContainer>PMRDA PMC Court</DegreeContainer></TextContainer>
-              <TextContainer><GiCircleClaws style={{fontSize: '2rem', marginTop: '10px'}}/></TextContainer>
-            </Card>
-          </ContactContainer>
-        </>
-        )
-}
+          <h1>About</h1>
+        </ContactHeroContent>
+      </ContactHeroSection>
+      <AboutContaner
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+      >
+        <AboutCard>
+          <Image src={profile} />
+          <NameTitle>Govind Lavhe</NameTitle>
+          <Position>CEO & Managing Director</Position>
+        </AboutCard>
+        <CompanyCard>
+          <Title
+          >
+            Contact Us
+          </Title>
+          <Content>
+            More than 40 years Raj Trading Company is working as Industrial &
+            Residential Painting contractors & service providers. We run our
+            business in various sectors in the societies like Industries and
+            corporate, Builders and housing societies, banks educational and
+            financial institutions etc . We have vast experience in <br /> • Paint
+            applications and Industrial painting with AMC service providers. <br /> •
+            Builders and corporate painting with AMC Services providers. <br /> •
+            Residential Painting work. • Deco, PU Painting and Polish. <br /> • Epoxy
+            paint & epoxy floor coating. • POP, Interiors, Decorative and
+            Designer painting work. <br /> • Bamboo and metal scaffolding for exterior
+            and interior work. <br /> • Exterior deep cleaning and waterproofing.
+            <Sign style={{textAlign: 'right', fontSize:"1rem", marginTop: '10px'}}>-Govind Lavhe</Sign>
+          </Content>
+        </CompanyCard>
+      </AboutContaner>
+    </>
+  );
+};
 
-export default About
+export default About;

@@ -8,9 +8,11 @@ position: fixed;
 z-index: 999;
 width: 100%;
 height: 100%;
-background: #cd853f;
+background: #00000;
+backdrop-filter:blur(50px) grayscale(0.4);
 display; grid;
 align-items: center;
+border-radius: 0% 0% 5% 5%;
 top: 0;
 left: 0;
 transition: 0.3s ease-in-out;
@@ -50,14 +52,14 @@ margin-bottom: 2rem;
 margin-top: 4rem;
 
 @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(4, 100px);
+    grid-template-rows: repeat(4, 75px);
 
 }
 `
 
 export const DropdownLink = styled(Link)`
 display: flex;
-color: #fff;
+color: #000;
 align-items: center;
 justify-content: center;
 text-decoration: none;
@@ -66,15 +68,18 @@ font-size: 1.5rem;
 list-style: none;
 cursor: pointer;
 transition : all 0.4s ease-in-out;
+font-weight: 800;
 
 
 &:hover{
-    color: #000d1a;
+    color: white;
     font-size: 2rem;
+    font-weight: 800;
 }
 `
 export const BtnWrap = styled.div`
 display: flex;
 justify-content: center;
+margint-bottom: 10px;
 
 `

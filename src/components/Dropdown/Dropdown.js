@@ -1,6 +1,6 @@
 import React from "react";
 import { menuData } from "../../Data/MenuData";
-import { Button } from "../Button/Button";
+import { Button, Button2 } from "../Button/Button";
 import { CloseIcon, DropdownContainer, DropdownMenu, DropdownWrapper, Icon, BtnWrap, DropdownLink } from "./DropdownElements";
 import useSound from 'use-sound';
 import close from "./sounds/close.mp3";
@@ -20,10 +20,10 @@ const Dropdown = ({ isOpen, toggle }) => {
    ) )}
               </DropdownMenu>
               <BtnWrap>
-                  <Button primary="true" round="true" big="true" to="/contact">Contact Us</Button>
+                  <Button2 style={{color: 'black'}} primary="true" round="true" big="true" to="/contact">Contact Us</Button2>
               </BtnWrap>
           </DropdownWrapper>
-          <h5 style={{textAlign: 'center', marginTop: '80px', fontSize: '1rem'}}>Adv Rajan Ladkat 2021</h5>
+          <h5 style={{textAlign: 'center', fontWeight:'700', marginTop: '80px', fontSize: '1rem', color: 'black'}}>Raj Trading Company</h5>
     </DropdownContainer>
   );
 };
