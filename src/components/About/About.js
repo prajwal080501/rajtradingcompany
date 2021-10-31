@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AboutCard,
   AboutContaner,
@@ -25,6 +25,7 @@ import styled from "styled-components";
 import { FaUserAlt } from "react-icons/fa";
 import { GiCircleClaws } from "react-icons/gi";
 import "./About.css";
+import Aos from "aos";
 
 import GlobalStyle from "../../GlobalStyles/GlobalStyle";
 import img from "./contactimg.jpg";
@@ -55,10 +56,17 @@ const About = () => {
     }
   };
   window.addEventListener("scroll", scrollEffect);
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+}, []);
   return (
     <>
       <GlobalStyle />
-      <ContactHeroSection className={heroSection ? "hero active" : "hero"}>
+      <ContactHeroSection
+        initial={{ x: -50, opacity: 0.4 }}
+         animate={{ opacity: 1, x:0}}
+         transition={{ duration: 0.001, ease: "easeOut" }}
+        className={heroSection ? "hero active" : "hero"}>
         <ContactHeroContent>
           <h1>About</h1>
         </ContactHeroContent>
@@ -69,17 +77,17 @@ const About = () => {
         exit={{ opacity: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
       >
-        <AboutCard>
+        <AboutCard data-aos="fade-left">
           <Image src={profile} />
           <NameTitle>Govind Lavhe</NameTitle>
           <Position>CEO & Managing Director</Position>
         </AboutCard>
-        <CompanyCard>
+        <CompanyCard data-aos="fade-left">
           <Title
           >
             Contact Us
           </Title>
-          <Content>
+          <Content >
             More than 40 years Raj Trading Company is working as Industrial &
             Residential Painting contractors & service providers. We run our
             business in various sectors in the societies like Industries and

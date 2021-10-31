@@ -17,7 +17,7 @@ import "./Navbar.css";
 
 import { FaBars } from "react-icons/fa";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, title }) => {
   const [play] = useSound(click, { volume: 0.15 });
   const [navbar, setNavbar] = useState(false);
   const [logo, setLogo] = useState(false);

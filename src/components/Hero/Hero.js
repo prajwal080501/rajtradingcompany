@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import { Button, Button2 } from "../Button/Button";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "./Hero.css";
 import {
   Arrow,
@@ -16,6 +15,7 @@ import {
   PrevArrow,
   SliderButtons,
 } from "./HeroElements";
+import { motion } from "framer-motion";
 
 const Hero = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -49,7 +49,12 @@ const Hero = ({ slides }) => {
     return null;
   }
   return (
-    <HeroSection>
+    <HeroSection
+      //spring
+      initial={{ y:50, opacity: 0.4 }}
+      animate={{ opacity: 1, y:0 }}
+      transition={{ duration: 0.5 }}
+    >
       <HeroWrappper>
         {slides.map((slide, index) => {
           return (
@@ -58,9 +63,18 @@ const Hero = ({ slides }) => {
                 <HeroSlide key={index}>
                   {index === current && (
                     <HeroSlider  >
-                      <HeroImage  src={slide.image} />
+                  <HeroImage
+                    initial={{  x: 30 }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 0.1 }}
+                    
+                    src={slide.image} />
 
-                      <HeroContent>
+                  <HeroContent
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                  >
                         <h1>{slide.title}</h1>
                       </HeroContent>
                     </HeroSlider>

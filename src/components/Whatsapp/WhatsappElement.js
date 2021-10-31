@@ -2,10 +2,11 @@ import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { AiFillMessage } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 
 
-export const WhatsappContainer = styled.a`
+export const WhatsappContainer = styled(motion.a)`
   position: fixed;
   width: 60px;
   height: 60px;
@@ -21,13 +22,7 @@ export const WhatsappContainer = styled.a`
   transition: all 0.5s ease;
 
 
-  &:hover{
-      transition: all 0.5s linear ;
-      cursor: pointer;
-      color: #fff;
-      background-color: #1a5ef0;
-      width: 65px;
-      height: 65px;
+ 
       
 
   }

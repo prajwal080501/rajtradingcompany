@@ -4,7 +4,7 @@ import img from "./contactimg.jpg";
 
 
 
-export const ContactHeroSection = styled.div`
+export const ContactHeroSection = styled(motion.div)`
   height: 80vh;
   max-height: 1100px;
   position: relative;
@@ -18,7 +18,6 @@ export const ContactHeroSection = styled.div`
   background-size: cover;
   border-radius: 0px 0px 15px 15px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
-  background-attachment: fixed;
 
   @media screen and (max-width: 768px){
     height: 70vh;

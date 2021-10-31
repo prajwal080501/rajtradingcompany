@@ -44,6 +44,7 @@ const Footer = () => {
               color: "#fff",
               fontWeight: "800",
               fontStyle: "cursive",
+              fontSize: '1.1rem'
             }}
           >
             Raj Trading Company 2021©

@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { SliderData } from "../../Data/SliderData";
 import GlobalStyle from "../../GlobalStyles/GlobalStyle";
 import "./Contact.css";
 import emailjs from "emailjs-com";
-
+import Aos from "aos";
 
 // import Container from 'react-bootstrap/Container'
 import Hero from "../Hero/Hero";
@@ -72,11 +72,18 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
       );
     e.target.reset();
   }
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+}, []);
   return (
     <>
       
       <GlobalStyle />
-      <ContactHeroSection className={heroSection ? "hero active" : "hero"} >
+      <ContactHeroSection
+        initial={{ x: 50, opacity: 0.4 }}
+        animate={{ opacity: 1, x:0}}
+        transition={{ duration: 0.001, ease:"easeOut" }}
+        className={heroSection ? "hero active" : "hero"} >
 
         <ContactHeroContent>
           <h1>Contact</h1>
@@ -88,7 +95,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
         exit={{ opacity: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
       >
-        <ContactCard>
+        <ContactCard data-aos="fade-up">
           <ContactTitle>Contact</ContactTitle>
           <MailContainer>
             <ContactSubHeading>Mail</ContactSubHeading>
@@ -121,7 +128,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
             </MapButton>
           </MailContainer>
         </ContactCard>
-        <FormCard>
+        <FormCard data-aos="fade-left">
           <h2
             style={{
               color: "black",

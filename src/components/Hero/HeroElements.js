@@ -2,11 +2,12 @@ import styled, { css } from "styled-components";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5"
 import { IoMdArrowForward } from "react-icons/io";
 import cursor from "../Navbar/cursor.png";
+import { motion } from "framer-motion";
 
 
 
 
-export const HeroSection = styled.section`
+export const HeroSection = styled(motion.div)`
 height: 100vh;
 max-height: 1100px;
 position: relative;
@@ -56,7 +57,7 @@ justify-content: center;
 }
 
 `
-export const HeroImage = styled.img`
+export const HeroImage = styled(motion.img)`
 position :absolute;
 top: 0;
 left: 0;
@@ -72,7 +73,7 @@ background-attachment: fixed;
     transform: scale(1.1);
 }
 `
-export const HeroContent = styled.div`
+export const HeroContent = styled(motion.div)`
 position: relative;
 z-index:10;
 text-shadow: 8px 8px 10px #000;

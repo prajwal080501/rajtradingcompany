@@ -1,9 +1,10 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import img from "./bgimg.jpg";
 
 
 
-export const ContactHeroSection = styled.div`
+export const ContactHeroSection = styled(motion.div)`
   height: 80vh;
   max-height: 1100px;
   position: relative;
@@ -15,7 +16,6 @@ export const ContactHeroSection = styled.div`
   ), url(${img});
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   border-radius: 0px 0px 15px 15px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
 &::before{
@@ -200,7 +200,8 @@ color; white;
   margin: auto;
   padding: 10px;
 margin-top: 15px;
-letter-spacing:1px;
+line-height: 1.5;
+letter-spacing:1.5px;
 font-weight: 700;
 @media screen and (max-width: 768px) {
   letter-spacing: 1.5px;
@@ -217,7 +218,7 @@ font-weight: 700;
 export const Title = styled.h2`
 color; white;
 font-size:2rem;
-margin-top: 50px;
+margin-top: 30px;
 text-align: left;
 font-weight: 900;
 

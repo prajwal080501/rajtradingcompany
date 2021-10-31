@@ -26,6 +26,7 @@ import {
   ContactHeroSection,
 } from "../Contact/ContactElements";
 import { Card, CardGroup } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 
 
@@ -44,13 +45,21 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
   return (
     <>
       <GlobalStyle />
-      <ServiceHeroSection className={heroSection ? "hero active" : "hero"}>
+      <ServiceHeroSection
+        initial={{ x: -50, opacity: 0.4 }}
+        animate={{ opacity: 1, x:0}}
+        transition={{ duration: 0.1 }}
+        className={heroSection ? "hero active" : "hero"}>
         <ContactHeroContent>
           <h1>Services</h1>
         </ContactHeroContent>
       </ServiceHeroSection>
       <CardGroup className="card-group">
-        <Card style={{backgroundColor: '#EA665C', color: 'white'}} className="card">
+        <motion.Card
+          initial={{ x: -100, opacity: 0.4 }}
+          animate={{ opacity: 1, x:0}}
+          transition={{ duration: 0.001, ease: "easeOut" }}
+          style={{ backgroundColor: '#EA665C', color: 'white' }} className="card">
           <Card.Img
             className="card-image"
             variant="top"
@@ -66,8 +75,12 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
           </Card.Body>
           <Card.Footer>
           </Card.Footer>
-        </Card>
-        <Card style={{backgroundColor: '#42A0C7', color: 'white'}} className="card">
+        </motion.Card>
+        <motion.Card
+          initial={{ x: 100, opacity: 0.4 }}
+          animate={{ opacity: 1, x:0}}
+          transition={{ duration: 0.5 }}
+          style={{ backgroundColor: '#42A0C7', color: 'white' }} className="card">
           <Card.Img
             className="card-image"
             variant="top"
@@ -81,10 +94,14 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
           </Card.Body>  
           <Card.Footer>
           </Card.Footer>
-        </Card>
+        </motion.Card>
       </CardGroup>
       <CardGroup className="card-group">
-      <Card style={{backgroundColor: '#DE8932', color: 'white'}} className="card">
+        <motion.Card
+          initial={{ x: -100, opacity: 0.4 }}
+          animate={{ opacity: 1, x:0}}
+          transition={{ duration: 0.5 }}
+          style={{ backgroundColor: '#DE8932', color: 'white' }} className="card">
           <Card.Img
             className="card-image"
             variant="top"
@@ -100,8 +117,12 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
           </Card.Body>
           <Card.Footer>
           </Card.Footer>
-        </Card>
-        <Card style={{backgroundColor: '#538C48', color: 'white'}} className="card">
+        </motion.Card>
+        <motion.Card
+          initial={{ x: 100, opacity: 0.4 }}
+          animate={{ opacity: 1, x:0}}
+          transition={{ duration: 0.5 }}
+          style={{ backgroundColor: '#538C48', color: 'white' }} className="card">
           <Card.Img
             className="card-image"
             variant="top"
@@ -115,7 +136,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
           </Card.Body>  
           <Card.Footer>
           </Card.Footer>
-        </Card>
+        </motion.Card>
       </CardGroup>
     </>
   );

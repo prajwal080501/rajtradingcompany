@@ -21,7 +21,7 @@ function Home() {
       <GlobalStyle />
         <Dropdown isOpen={isOpen} toggle={toggle} />
        
-        <Navbar toggle={toggle} />
+        <Navbar title="Raj Trading Company" toggle={toggle} />
         
       <Hero slides={SliderData} />
        

@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import img from "./house.jpg";
+import { motion } from "framer-motion";
 
-export const ServiceHeroSection = styled.section`
+
+export const ServiceHeroSection = styled(motion.div)`
   height: 80vh;
   max-height: 1100px;
   position: relative;
@@ -13,7 +15,6 @@ export const ServiceHeroSection = styled.section`
   ), url(${img});
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-color: red;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
 &::before{

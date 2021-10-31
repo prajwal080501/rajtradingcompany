@@ -60,7 +60,7 @@ img{
     transition:all 0.4s linear;
 
     @media screen and (max-width:768px){
-        width: 60vh;
+        width: 40vh;
         height: 90%;
         display: flex;
     justify-self: center;
