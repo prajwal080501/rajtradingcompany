@@ -15,7 +15,7 @@ const InfoSection = ({ heading, paraOne, paraTwo, buttonLabel, reverse, image, h
 
     return (
         <Section>
-            <Container data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+            <Container data-aos="fade-left" data-aos-easing="linear" data-aos-duration="700">
                 <ColumnLeft>
                     <h1 style={{letterSpacing: '2px', padding: '5px'}}>{heading}</h1>
                     <p style={{letterSpacing: '2px', padding: '5px'}}>{paraTwo}</p>

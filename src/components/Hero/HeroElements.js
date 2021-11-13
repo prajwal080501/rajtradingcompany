@@ -111,9 +111,9 @@ p{
 
 export const SliderButtons = styled.div`
 position: absolute;
-bottom: 50px;
-right: 50px;
+bottom: 40px;
 display: flex;
+justify-self: center;
 z-index: 10;
 
 `

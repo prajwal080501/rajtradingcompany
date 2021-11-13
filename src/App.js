@@ -16,6 +16,7 @@ import Footer from "./components/Footer/Footer";
 import Whatsapp from "./components/Whatsapp/Whatsapp";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { AnimatePresence, motion } from "framer-motion";
+import {AboutData} from "./Data/AboutData";
 
 //main function
 function App() {

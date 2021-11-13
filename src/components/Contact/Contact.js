@@ -28,6 +28,7 @@ import {
   Label,
   MailContainer,
   MapButton,
+  MapContainer,
   Section,
   TextArea,
 } from "./ContactElements";
@@ -37,6 +38,7 @@ import { AiFillMail, AiFillPhone } from "react-icons/ai";
 import { HiOfficeBuilding } from "react-icons/hi";
 import { Button, Button2, Button3 } from "../Button/Button";
 import { LinkItem } from "../Footer/FooterElements";
+import Map from "../Map/Map";
 
 const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
 
@@ -95,7 +97,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
         exit={{ opacity: 0 }}
         transition={{ ease: "easeInOut", duration: 1 }}
       >
-        <ContactCard data-aos="fade-up">
+        <ContactCard data-aos="fade-up" data-aos-duration="700">
           <ContactTitle>Contact</ContactTitle>
           <MailContainer>
             <ContactSubHeading>Mail</ContactSubHeading>
@@ -126,9 +128,10 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
             >
               View on map
             </MapButton>
+            
           </MailContainer>
         </ContactCard>
-        <FormCard data-aos="fade-left">
+        <FormCard >
           <h2
             style={{
               color: "black",
@@ -170,6 +173,9 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
           </FormContainer>
         </FormCard>
       </ContactContainer>
+      {/* <MapContainer>
+        <Map />
+      </MapContainer> */}
     </>
   );
 };

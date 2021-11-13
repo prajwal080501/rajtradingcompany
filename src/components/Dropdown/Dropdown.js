@@ -4,6 +4,7 @@ import { Button, Button2 } from "../Button/Button";
 import { CloseIcon, DropdownContainer, DropdownMenu, DropdownWrapper, Icon, BtnWrap, DropdownLink } from "./DropdownElements";
 import useSound from 'use-sound';
 import close from "./sounds/close.mp3";
+import {motion} from "framer-motion";
 
 
 const Dropdown = ({ isOpen, toggle }) => {
@@ -14,9 +15,12 @@ const Dropdown = ({ isOpen, toggle }) => {
         <CloseIcon onClick={toggle} onMouseEnter={pause} />
           </Icon>
           <DropdownWrapper>
-              <DropdownMenu>
+        <DropdownMenu
+        >
                   {menuData.map((item, index) => (
-                      <DropdownLink to={item.link} kay={index}>{item.title}</DropdownLink>
+                    <DropdownLink
+                      
+                      to={item.link} kay={index}>{item.title}</DropdownLink>
    ) )}
               </DropdownMenu>
               <BtnWrap>

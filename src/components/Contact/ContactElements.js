@@ -372,4 +372,10 @@ height: 100px;
 padding: 10px;
 border-radius: 10px;
 
+`;
+
+export const MapContainer = styled.div`
+widht: 100%;
+height: 80vh;
+border: 2px solid black;
 `

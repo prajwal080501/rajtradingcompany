@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import Aos from "aos";
 
 import {
   CompanyContainer,
@@ -16,11 +17,15 @@ import {
   InstagramSocialIcons,
   GithubSocialIcons,
 } from "./FooterElements";
+import Map from "../Map/Map";
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+}, []);
   return (
     <FooterWrapper>
-      <LinkList>
+      <LinkList data-aos="fade-right" data-aos-duration="700">
         <LinkColumn>
           <LinkTitle style={{ color: "#f0e79d"  }}>Call</LinkTitle>
           <LinkItem  href="tel:+919922991836">
@@ -40,6 +45,7 @@ const Footer = () => {
       <SocialIconsContainer>
         <CompanyContainer>
           <Slogan
+            data-aos="fade-right" data-aos-duration="700"
             style={{
               color: "#fff",
               fontWeight: "800",
@@ -63,7 +69,7 @@ const Footer = () => {
               textShadow: '1px 1px 5px #000'
             }}
           > Developed with ❤️ by <strong> <a target="_blank" href="https://github.com/"style={{textDecoration: 'none', color: 'orange'}} href="https://prajwalladkat.tech">Prajwal Ladkat</a> </strong> .{" "}
-          </Slogan>
+      </Slogan>
     </FooterWrapper>
   );
 };
