@@ -48,7 +48,7 @@ import { Button2 } from "../Button/Button";
 
 const About = () => {
   const aboutPara =
-    "More than 40 years Raj Trading Company is working as Industrial & Residential Painting contractors & service providers. We run our business in various sectors in the societies like Industries and corporate, Builders and housing societies, banks educational and financial institutions etc . We have vast experience in <br /> • Paint applications and Industrial painting with AMC service providers. <br /> • Builders and corporate painting with AMC Services providers. <br /> • Residential Painting work. • Deco, PU Painting and Polish. <br /> • Epoxy paint & epoxy floor coating. • POP, Interiors, Decorative and Designer painting work. <br /> • Bamboo and metal scaffolding for exterior and interior work. <br /> • Exterior deep cleaning and waterproofing.";
+    "More than 40 years Raj Trading Company is working as Industrial & Residential Painting contractors & service providers. We run our business in various sectors in the societies like Industries and corporate, Builders and housing societies, banks educational and financial institutions etc . We have vast experience in • Paint applications and Industrial painting with AMC service providers. • Builders and corporate painting with AMC Services providers.  • Residential Painting work. • Deco, PU Painting and Polish. • Epoxy paint & epoxy floor coating. • POP, Interiors, Decorative and Designer painting work.  • Bamboo and metal scaffolding for exterior and interior work. • Exterior deep cleaning and waterproofing.";
   const [heroSection, setHeroSection] = useState(false);
   const scrollEffect = () => {
     if (window.scrollY >= 250) {

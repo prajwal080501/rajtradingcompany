@@ -42,31 +42,31 @@ const Footer = () => {
           </LinkItem>
         </LinkColumn>
       </LinkList>
-      <SocialIconsContainer>
-        <CompanyContainer>
-          <Slogan
-            data-aos="fade-right" data-aos-duration="700"
-            style={{
-              color: "#fff",
-              fontWeight: "800",
-              fontStyle: "cursive",
-              fontSize: '1.1rem'
-            }}
-          >
-            Raj Trading Company 2021©
-          </Slogan>
-          
-        </CompanyContainer>
-        
-      </SocialIconsContainer>
-      <BackToTopButton>Back</BackToTopButton>
       <Slogan
             style={{
+              width: "40vw",
               color: "#fff",
               fontWeight: "800",
-              fontStyle: "cursive",
+          fontStyle: "cursive",
+              margin:"auto",
           textAlign: 'center',
               textShadow: '1px 1px 5px #000'
+            }}
+          >
+            Copyright © 2021 Raj Trading Company.
+          </Slogan>
+      <Slogan
+        style={{
+              width: "50vw",
+              color: "#fff",
+              fontWeight: "800",
+          fontStyle: "cursive",
+              margin:"auto",
+          textAlign: 'center',
+          textShadow: '1px 1px 5px #000',
+              position: "relative",
+          bottom: "0",
+          marginBottom: "-20px",
             }}
           > Developed with ❤️ by <strong> <a target="_blank" href="https://github.com/"style={{textDecoration: 'none', color: 'orange'}} href="https://prajwalladkat.tech">Prajwal Ladkat</a> </strong> .{" "}
       </Slogan>

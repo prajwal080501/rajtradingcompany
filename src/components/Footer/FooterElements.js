@@ -6,7 +6,7 @@ export const FooterWrapper = styled.section`
   padding: 2rem 48px 40px;
   box-sizing: content-box;
   background-color: #000d1a;
-  height: 40%;
+  height: 230px;
   background-color:#676cf5npm staa;
   border-radius: 10px 10px 0px 0px;
 
@@ -15,6 +15,8 @@ export const FooterWrapper = styled.section`
     {
     padding: 0 16px 48px;
     width: calc(100vw - 32px);
+	bottom: 0;
+	height:fit-content;
   }
 `
 
@@ -71,7 +73,7 @@ export const CompanyContainer = styled.div`
   display: flex;
 	align-items:baseline;
 	flex-wrap: wrap;
-	margin-right: auto;
+	margin: auto;
 	
 
     @media screen and (max-width: 768px) 
@@ -93,21 +95,16 @@ export const Slogan = styled.p`
 	color:white;
 	min-width: 280px;
 	letter-spacing: 0.02em;
-	font-size: 18px;
+	font-size: 12px;
 	line-height: 30px;
-	padding: 1rem;
+	padding: 0.5rem;
+	margin:auto;
 
 	@media screen and (max-width: 768px) {
 
-		font-size: 16px;
+		font-size: 10px;
 		line-height: 28px;
-	}
-
-	@media screen and (max-width: 640px) {
-
-		line-height: 22px;
-		font-size: 14px;
-		min-width: 100px;
+		width: 80vw;
 	}
 `
 
@@ -129,6 +126,7 @@ export const LinkList = styled.ul`
 	grid-template-columns: repeat(3, minmax(85px, 220px));
 	gap: 40px;
   padding: 40px 0 28px;
+  
 
   @media screen and (max-width: 1024px) {
     {

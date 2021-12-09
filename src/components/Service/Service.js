@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { SliderData } from "../../Data/SliderData";
 import GlobalStyle from "../../GlobalStyles/GlobalStyle";
-import Aos from 'aos';
+import Aos from "aos";
 import {
   CardImage,
   CardTitle,
   ServiceCardHolder,
   ServiceHeroSection,
 } from "./ServiceElements";
+import { Link } from "react-router-dom";
 
 import "./Service.css";
 // import Container from 'react-bootstrap/Container'
@@ -42,7 +43,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
   window.addEventListener("scroll", scrollEffect);
   useEffect(() => {
     Aos.init({ duration: 2000 });
-}, []);
+  }, []);
   return (
     <>
       <GlobalStyle />
@@ -78,6 +79,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
               and and leave the job to us to help you make the task of painting
               your house seamless and easy.{" "}
             </Card.Text>
+            <Link to="/gallery" className="card-button">View More</Link>
           </Card.Body>
           <Card.Footer></Card.Footer>
         </motion.Card>
@@ -101,6 +103,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
               Experience in Wall designing and Wall Textures will provide unique
               dsigns and suggestions to revamp any space in your home
             </Card.Text>
+            <button className="card-button">View More</button>
           </Card.Body>
           <Card.Footer></Card.Footer>
         </motion.Card>
@@ -127,14 +130,16 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
               Industrial Painting Work
             </Card.Title>
             <Card.Text style={{ color: "white" }}>
-             Industrial Projects offers a host of services that cater to the needs of large users and help them  for a big-scale painting job.
+              Industrial Projects offers a host of services that cater to the
+              needs of large users and help them for a big-scale painting job.
             </Card.Text>
+            <button className="card-button">View More</button>
           </Card.Body>
           <Card.Footer></Card.Footer>
         </motion.Card>
         <motion.Card
-         data-aos="fade-right"
-         data-aos-duration="700"
+          data-aos="fade-right"
+          data-aos-duration="700"
           className="card"
           initial={{ x: -100, opacity: 0.4 }}
           animate={{ opacity: 1, x: 0 }}
@@ -150,6 +155,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
               Providing world class modern and unique looking ceiling and POP
               designs
             </Card.Text>
+            <button className="card-button">View More</button>
           </Card.Body>
           <Card.Footer></Card.Footer>
         </motion.Card>
@@ -162,7 +168,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
           initial={{ x: -100, opacity: 0.4 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.001, ease: "easeOut" }}
-          style={{ backgroundColor: "#8a89e8", color: "white" }}
+          style={{ backgroundColor: "#F1CE6D", color: "white" }}
           className="card"
           whileHover={{ scale: 1.01, duration: 0.5 }}
         >
@@ -172,12 +178,12 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
             src="https://source.unsplash.com/weekly?Industrial,office"
           />
           <Card.Body>
-            <Card.Title style={{ color: "white" }}>
-              Waterproofing
-            </Card.Title>
+            <Card.Title style={{ color: "white" }}>Waterproofing</Card.Title>
             <Card.Text style={{ color: "white" }}>
-             We offer the highest standard in waterproofing technology, methods and materials for your interior & exterior waterproofing.
+              We offer the highest standard in waterproofing technology, methods
+              and materials for your interior & exterior waterproofing.
             </Card.Text>
+            <button className="card-button">View More</button>
           </Card.Body>
           <Card.Footer></Card.Footer>
         </motion.Card>
@@ -198,6 +204,7 @@ const Contact = ({ toggle, isOpen, setIsOpen, reverse }) => {
               Providing world class modern and unique looking ceiling and POP
               designs
             </Card.Text>
+            <button className="card-button">View More</button>
           </Card.Body>
           <Card.Footer></Card.Footer>
         </motion.Card>

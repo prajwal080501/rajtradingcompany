@@ -57,7 +57,7 @@ const Hero = ({ slides }) => {
     >
       <HeroWrappper>
         {slides.map((slide, index) => {
-          return (
+          return (  
             
              
                 <HeroSlide key={index}>
