@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { GiCircleClaws } from "react-icons/gi";
-import {AiFillFormatPainter } from 'react-icons/ai'
+import { AiFillFormatPainter } from "react-icons/ai";
 import {
   Logo,
   MenuBars,
@@ -30,7 +30,7 @@ const Navbar = ({ toggle, title }) => {
       setNavbar(false);
     }
   };
-  
+
   const changeLogoBackground = () => {
     if (window.scrollY >= 80) {
       setLogo(true);
@@ -65,16 +65,11 @@ const Navbar = ({ toggle, title }) => {
           onMouseEnter={play}
         />
         <NavMenu>
-          {menuData.map((item, index) => (
-            <NavMenuLinks
-              className={navbar ? "navbar menuactive" : "navbar"}
-              onClick={play}
-              to={item.link}
-              key={index}
-            >
-              {item.title}
-            </NavMenuLinks>
-          ))}
+          <NavMenuLinks to="/">Home</NavMenuLinks>
+          <NavMenuLinks to="/about">About</NavMenuLinks>
+          
+          <NavMenuLinks to="/gallery">Gallery</NavMenuLinks>
+          <NavMenuLinks to="/service">Services</NavMenuLinks>
         </NavMenu>
         <NavBtn>
           <Button primary="true" to="/contact">

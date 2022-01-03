@@ -80,3 +80,21 @@
 margin: auto;  
 }
 }
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 14vh;
+  left: 4vw;
+  background-color: #fff;
+  padding: 15px;
+  color: black;
+  border-radius: 10px;
+  
+}
+
+.dropdown .link{
+  color: black;
+  margin: 4px;
+}
